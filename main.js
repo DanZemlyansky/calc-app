@@ -16,9 +16,23 @@
 
 //basic add function basis for calc 
 
-
-const numBtns = document.getElementsById('numbers');
+const INPUT = document.getElementById('cInput');
+const NUM_BTNS = document.getElementById('numbers');
 
 for (let i = 0; i < 10; i++) {
-    numBtns.innerHTML = `<div class = "num">${i}</div>`
+    NUM_BTNS.innerHTML += `<button class="num">${i}</button>`
 }
+
+function numPress(event) {
+    const clickedButtonValue = event.target.textContent;
+
+    INPUT.value += clickedButtonValue;
+}
+
+document.querySelectorAll('.num').forEach((button) => {
+    button.addEventListener('click', numPress);
+})
+
+// switch(){
+//     case
+// }
