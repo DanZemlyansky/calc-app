@@ -1,0 +1,7 @@
+.num {
+    display: flex;
+    width: 5vh;
+    height: auto;
+    justify-content: center;
+    font-size: 2em;
+}
