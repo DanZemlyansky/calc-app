@@ -43,11 +43,17 @@ function clearText() {
     input.value = '';
 }
 
+function removeLast() {
+    input.value = input.value.slice(0, -1);
+}
+
+
+del.addEventListener('click', removeLast)
 
 
 
 
-
+console.log(input.value);
 
 
 

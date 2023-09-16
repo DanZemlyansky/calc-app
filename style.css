@@ -14,3 +14,33 @@
     width: 50vw;
 }
 
+#calcWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+}
+
+
+button {
+    font-size: 1.2em;
+    padding: 0.5em;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 10vw
+}
+
+#input {
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.operator {
+    width: 2em;
+}
