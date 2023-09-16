@@ -1,7 +1,16 @@
-.num {
+.number {
     display: flex;
+    flex-wrap: wrap;
     width: 5vh;
     height: auto;
     justify-content: center;
     font-size: 2em;
 }
+
+#numbers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 50vw;
+}
+

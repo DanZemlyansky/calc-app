@@ -1,38 +1,60 @@
-// function addFunc() {
-//     const NUM1 = +document.getElementById('num1').value;
-//     const NUM2 = +document.getElementById('num2').value;
 
-//     switch (true) {
-//         case isNaN(NUM1 || isNaN(NUM2)):
-//             document.getElementById('result').innerText = 'Please enter a number.';
-//             return;
-//         default:
-//             document.getElementById('result').innerText = NUM1 + NUM2;
-//             return;
-//     }
-
-// } 
+let input = document.getElementById('input');
+let num1;
+let num2;
 
 
-//basic add function basis for calc 
 
-const INPUT = document.getElementById('cInput');
-const NUM_BTNS = document.getElementById('numbers');
+
+
+const NUMBERS = document.getElementsByClassName('number');
+const OPERATOR = document.getElementsByClassName('operator');
+let GET_RESULT = document.getElementById('getResult')
 
 for (let i = 0; i < 10; i++) {
-    NUM_BTNS.innerHTML += `<button class="num">${i}</button>`
+    document.getElementById('numbers').innerHTML += `<button class="number">${i}</button>`
 }
 
-function numPress(event) {
-    const clickedButtonValue = event.target.textContent;
 
-    INPUT.value += clickedButtonValue;
+
+for (const numberElement of NUMBERS) {
+    numberElement.addEventListener('click', addNum);
 }
 
-document.querySelectorAll('.num').forEach((button) => {
-    button.addEventListener('click', numPress);
-})
+for (const operatorElement of OPERATOR) {
+    operatorElement.addEventListener('click', selectedOperator)
+}
+function selectedOperator() {
+    input.value += this.textContent;
+}
 
-// switch(){
-//     case
-// }
+function addNum() {
+    input.value += this.textContent; // 'this' refers to the clicked number button
+}
+
+function execute() {
+    const EXPRESSION = input.value;
+    let result = eval(EXPRESSION);
+    input.value = result;
+
+}
+
+function clearText() {
+    input.value = '';
+}
+
+
+
+
+
+
+
+
+
+
+
+GET_RESULT.addEventListener('click', execute);
+
+document.getElementById('clearField').addEventListener('click', clearText); // clear the input field.
+
+
