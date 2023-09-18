@@ -1,3 +1,10 @@
+#content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 100%;
+}
+
 .number {
     display: flex;
     flex-wrap: wrap;
@@ -23,15 +30,10 @@
 }
 
 
-#content {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
 
 
 #input {
+    margin-bottom: 1%;
     border: none;
     border-radius: 5px;
     background-color: #2e2e2e;
@@ -75,12 +77,12 @@ button {
 }
 
 .operator {
-    width: 50%;
+    width: 49%;
     font-weight: bold;
 }
 
 #del {
-    width: 50%
+    width: 49%
 }
 
 #clearField {

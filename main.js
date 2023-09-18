@@ -32,12 +32,12 @@ function addNum() {
 }
 
 function execute() {
+    if (input.value === '') {
+        input.value = 'ERROR'
+    };
     const EXPRESSION = input.value;
     let result = eval(EXPRESSION);
     input.value = result;
-    if(input.value === ''){
-        input.value = 'Please enter a calculation.'
-    }
 
 }
 
@@ -50,19 +50,10 @@ function removeLast() {
 }
 
 
-del.addEventListener('click', removeLast)
-
-
-
-
-console.log(input.value);
-
-
-
-
+del.addEventListener('click', removeLast);
 
 GET_RESULT.addEventListener('click', execute);
 
-document.getElementById('clearField').addEventListener('click', clearText); // clear the input field.
+document.getElementById('clearField').addEventListener('click', clearText);
 
 
