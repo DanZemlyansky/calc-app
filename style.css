@@ -1,24 +1,30 @@
 #content {
+    width: 100%;
+    scale: 100%;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
-    margin-left: 100%;
+    align-items: center;
+    height: 100vh;
 }
 
+
+
 .number {
-    display: flex;
-    flex-wrap: wrap;
-    width: 5vw;
-    justify-content: space-around;
     font-size: 2em;
+    width: 30%;
 }
 
 #numbers {
+    background-color: #2e2e2e;
     display: flex;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    gap: 2px;
     width: 50%;
-    height: 10vh;
+    gap: 2px;
 }
 
 
@@ -99,14 +105,10 @@ button {
 
 
 
-/* css grid */
 
 
 body {
     background-color: #3b3b3b;
     overflow: hidden;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-area: 1 / 1 / 6 / 6;
+    margin: 0;
 }

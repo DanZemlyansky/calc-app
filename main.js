@@ -1,11 +1,6 @@
 
 let input = document.getElementById('input');
 
-
-
-
-
-
 const NUMBERS = document.getElementsByClassName('number');
 const OPERATOR = document.getElementsByClassName('operator');
 let GET_RESULT = document.getElementById('getResult');
