@@ -1,7 +1,6 @@
 
 let input = document.getElementById('input');
-let num1;
-let num2;
+
 
 
 
@@ -9,7 +8,7 @@ let num2;
 
 const NUMBERS = document.getElementsByClassName('number');
 const OPERATOR = document.getElementsByClassName('operator');
-let GET_RESULT = document.getElementById('getResult')
+let GET_RESULT = document.getElementById('getResult');
 
 for (let i = 0; i < 10; i++) {
     document.getElementById('numbers').innerHTML += `<button class="number">${i}</button>`
@@ -29,13 +28,16 @@ function selectedOperator() {
 }
 
 function addNum() {
-    input.value += this.textContent; // 'this' refers to the clicked number button
+    input.value += this.textContent;
 }
 
 function execute() {
     const EXPRESSION = input.value;
     let result = eval(EXPRESSION);
     input.value = result;
+    if(input.value === ''){
+        input.value = 'Please enter a calculation.'
+    }
 
 }
 

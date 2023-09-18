@@ -10,20 +10,26 @@
 
 <body>
 
-    <div id="calcWrapper">
+    <div id="content">
         <input type="text" id="input">
-        <div class="buttons">
-            <button class="operator" id="addBtn">+</button>
-            <button class="operator" id="subtractBtn">-</button>
-            <button class="operator" id="multiplyBtn">*</button>
-            <button class="operator" id="divideBtn">/</button>
-            <button class="operator" id="modul">%</button>
-            <button id="getResult">=</button>
-            <button id="del">DEL</button>
-            <button id="clearField">CLEAR</button>
+        <div id="calcWrapper">
+            <div id="numbers"></div>
+            <div class="buttons">
+                <button class="operator" id="addBtn">+</button>
+                <button class="operator" id="subtractBtn">-</button>
+                <button class="operator" id="multiplyBtn">*</button>
+                <button class="operator" id="divideBtn">/</button>
+                <button class="operator" id="modul">%</button>
+                <button id="del">DEL</button>
+                <div class="bigBtn">
+                    <button id="clearField">CLEAR</button>
+                </div>
+                <button id="getResult">=</button>
+            </div>
         </div>
-        <div id="numbers"></div>
     </div>
+
+
 
 
     <script src="main.js"></script>
