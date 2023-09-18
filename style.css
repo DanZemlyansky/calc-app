@@ -40,6 +40,7 @@
 
 
 #input {
+    user-select: none;
     margin-bottom: 1%;
     border: none;
     border-radius: 5px;
